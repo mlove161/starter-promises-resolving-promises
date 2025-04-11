@@ -9,6 +9,7 @@ function selectRandomFortune() {
 function welcome() {
   const message = "Provide me a question and I'll give you an answer...";
   return Promise.resolve(message);
+  // resolved with message
 }
 
 function goodbye() {
@@ -20,6 +21,7 @@ function tell(question) {
   if (!question) {
     const message = "A question is required...";
     return Promise.reject(message);
+    // return rejection
   }
 
   const fortune = selectRandomFortune();
